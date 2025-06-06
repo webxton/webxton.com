@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 
@@ -23,14 +24,14 @@
 
   <main class="page-content">
     <h2>Contact Me</h2>
-    <p>Feel free to get in touch! Click the button below to email me directly.</p>
+    <p>Feel free to get in touch! Click below to email me.</p>
     <a href="https://mail.google.com/mail/?view=cm&to=webxton@gmail.com" class="btn-email">Email Me</a>
   </main>
 
   <footer>
     <div class="footer-socials">
-      <a href="https://instagram.com/webxton" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://discord.gg/B8D7BZGe" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+      <a href="https://instagram.com/webxton" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://discord.gg/B8D7BZGe" target="_blank"><i class="fab fa-discord"></i></a>
     </div>
     <p>&copy; 2025 webXton | All rights reserved.</p>
   </footer>
@@ -38,6 +39,15 @@
   <script>
     document.querySelector('.nav-toggle').onclick = () =>
       document.querySelector('.nav-links').classList.toggle('open');
+
+    ScrollReveal().reveal('.btn-email, .page-content p', {
+      origin: 'bottom',
+      distance: '30px',
+      duration: 800,
+      delay: 100,
+      easing: 'ease-in-out',
+      reset: false
+    });
   </script>
 
 </body>
