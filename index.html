@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>webXton | Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <style>html{scroll-behavior:smooth}</style>
 </head>
 <body>
-  <video autoplay muted loop id="bg-video-desktop">
-    <source src="media/bg-desktop.mp4" type="video/mp4" />
-  </video>
-  <video autoplay muted loop id="bg-video-mobile">
-    <source src="media/bg-mobile.mp4" type="video/mp4" />
-  </video>
-
-  <nav class="main-nav">
+  <nav class="main-nav glass">
     <div class="logo">webXton</div>
     <button class="nav-toggle" aria-label="Toggle menu">☰</button>
     <ul class="nav-links">
@@ -30,11 +24,13 @@
   </nav>
 
   <header>
-    <h1>I’m <span id="typed-name"></span></h1>
-    <p>Web Developer | Gamer Vibes | Freelancer</p>
-    <div class="btns">
-      <a href="contact.html">Hire Me</a>
-      <a href="about.html">View My Work</a>
+    <div class="glass" style="padding:60px 40px;max-width:540px">
+      <h1>I’m <span id="typed-name"></span></h1>
+      <p>Web Developer | Gamer Vibes | Freelancer</p>
+      <div class="btns">
+        <a href="contact.html">Hire Me</a>
+        <a href="about.html">View My Work</a>
+      </div>
     </div>
   </header>
 
@@ -49,22 +45,13 @@
   <script>
     document.querySelector('.nav-toggle').onclick = () =>
       document.querySelector('.nav-links').classList.toggle('open');
-
     new Typed('#typed-name', {
       strings: ['ABHI', 'webXton', 'a Coder', 'a Creator'],
       typeSpeed: 60,
       backSpeed: 40,
       loop: true
     });
-
-    ScrollReveal().reveal('header, .btns a', {
-      origin: 'bottom',
-      distance: '30px',
-      duration: 800,
-      delay: 100,
-      easing: 'ease-in-out',
-      reset: false
-    });
+    ScrollReveal().reveal('.glass', { origin: 'bottom', distance: '30px', duration: 800, delay: 100, reset: false });
   </script>
 </body>
 </html>

@@ -4,20 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | webXton</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>html{scroll-behavior:smooth}</style>
 </head>
 <body>
-  <video autoplay muted loop id="bg-video-desktop">
-    <source src="media/bg-desktop.mp4" type="video/mp4" />
-  </video>
-  <video autoplay muted loop id="bg-video-mobile">
-    <source src="media/bg-mobile.mp4" type="video/mp4" />
-  </video>
-
-  <nav class="main-nav">
+  <nav class="main-nav glass">
     <div class="logo">webXton</div>
     <button class="nav-toggle" aria-label="Toggle menu">☰</button>
     <ul class="nav-links">
@@ -31,7 +24,7 @@
   <main class="page-content">
     <h2>Contact Me</h2>
     <p>Feel free to get in touch! Click below to email me.</p>
-    <a href="mailto:webxton@gmail.com" class="btn-email">Email Me</a>
+    <a href="mailto:webxton@gmail.com" class="btn-email glass">Email Me</a>
   </main>
 
   <footer>
@@ -45,15 +38,6 @@
   <script>
     document.querySelector('.nav-toggle').onclick = () =>
       document.querySelector('.nav-links').classList.toggle('open');
-
-    ScrollReveal().reveal('.btn-email, .page-content p', {
-      origin: 'bottom',
-      distance: '30px',
-      duration: 800,
-      delay: 100,
-      easing: 'ease-in-out',
-      reset: false
-    });
   </script>
 </body>
 </html>
