@@ -1,64 +1,210 @@
+<!-- about.html - About Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | webXton</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="https://unpkg.com/scrollreveal"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | WEBxTON</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <video autoplay muted loop id="bg-video-desktop">
-    <source src="media/bg-desktop.mp4" type="video/mp4" />
-  </video>
-  <video autoplay muted loop id="bg-video-mobile">
-    <source src="media/bg-mobile.mp4" type="video/mp4" />
-  </video>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>WEB<span class="logo-accent">x</span>TON<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <nav class="main-nav">
-    <div class="logo">webXton</div>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">About <span class="gradient-text">Me</span></h1>
+            <p class="page-subtitle">Get to know my journey and skills</p>
+        </div>
+    </section>
 
-  <main class="page-content">
-    <h2>About Me</h2>
-    <p>I’m a passionate self-taught web developer who builds awesome, fast websites.</p>
-    <p>Inspired by gaming interfaces like Valorant, I bring modern UI + smooth UX into every project.</p>
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-container reveal-left">
+                    <div class="about-image-wrapper">
+                        <div class="about-image-bg"></div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="WEBxTON" class="about-image">
+                        <div class="experience-badge">
+                            <span class="exp-number">5+</span>
+                            <span class="exp-text">Years Exp.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-content reveal-right">
+                    <h2 class="section-title">My <span class="gradient-text">Story</span></h2>
+                    <p class="about-text">
+                        I'm a passionate full-stack developer with over 5 years of experience creating 
+                        digital solutions that make a difference. My journey began with a curiosity 
+                        about how things work on the web, which quickly evolved into a deep passion 
+                        for coding.
+                    </p>
+                    <p class="about-text">
+                        I specialize in building scalable web applications using modern technologies. 
+                        When I'm not coding, you'll find me exploring new tech trends, contributing 
+                        to open-source projects, or mentoring aspiring developers.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="30">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
 
-    <div class="about-grid">
-      <div class="card"><i class="fas fa-code"></i><h3>Dev Skills</h3><p>HTML, CSS, JS, UI/UX</p></div>
-      <div class="card"><i class="fas fa-gamepad"></i><h3>Gamer UI</h3><p>Built with gaming DNA</p></div>
-    </div>
-  </main>
+                    <a href="#" class="btn btn-primary" download>
+                        <span>Download Resume</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
 
-  <footer>
-    <div class="footer-socials">
-      <a href="https://instagram.com/webxton" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://discord.gg/B8D7BZGe" target="_blank"><i class="fab fa-discord"></i></a>
-    </div>
-    <p>&copy; 2025 webXton | All rights reserved.</p>
-  </footer>
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h2 class="section-title center reveal-up">Technical <span class="gradient-text">Skills</span></h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category reveal-up">
+                        <div class="skill-header">
+                            <i class="fas fa-code skill-icon"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML/CSS</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React.js</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-  <script>
-    document.querySelector('.nav-toggle').onclick = () =>
-      document.querySelector('.nav-links').classList.toggle('open');
+                    <div class="skill-category reveal-up">
+                        <div class="skill-header">
+                            <i class="fas fa-server skill-icon"></i>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Node.js</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>MongoDB</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    ScrollReveal().reveal('.page-content, .about-grid .card', {
-      origin: 'bottom',
-      distance: '30px',
-      duration: 800,
-      delay: 100,
-      easing: 'ease-in-out',
-      reset: false
-    });
-  </script>
+                    <div class="skill-category reveal-up">
+                        <div class="skill-header">
+                            <i class="fas fa-tools skill-icon"></i>
+                            <h3>Tools & Others</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Git/GitHub</span>
+                                    <span>92%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Docker</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>AWS</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="65"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>

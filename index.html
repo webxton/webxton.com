@@ -1,70 +1,210 @@
+<!-- index.html - Home Page with Scroll Indicator -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>webXton | Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBxTON | Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <video autoplay muted loop id="bg-video-desktop">
-    <source src="media/bg-desktop.mp4" type="video/mp4" />
-  </video>
-  <video autoplay muted loop id="bg-video-mobile">
-    <source src="media/bg-mobile.mp4" type="video/mp4" />
-  </video>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>WEB<span class="logo-accent">x</span>TON<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <nav class="main-nav">
-    <div class="logo">webXton</div>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Welcome to my portfolio</p>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">WEBxTON</span>
+                    <br>
+                    <span class="typewriter" id="typewriter">Web Developer</span>
+                </h1>
+                <p class="hero-description">
+                    I craft elegant digital experiences with clean code and modern design. 
+                    Specializing in full-stack development, I bring ideas to life through 
+                    innovative web solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        <span>Contact Me</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-container">
+                    <div class="hero-image-bg"></div>
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dot red"></div>
+                            <div class="code-dot yellow"></div>
+                            <div class="code-dot green"></div>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="code-keyword">const</span>
+                                <span class="code-variable">developer</span> = {
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">name</span>: <span class="code-string">'WEBxTON'</span>,
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">skills</span>: [<span class="code-string">'React'</span>, <span class="code-string">'Node'</span>],
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">passion</span>: <span class="code-string">'Building things'</span>
+                            </div>
+                            <div class="code-line">};</div>
+                            <div class="code-line cursor-blink">|</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </section>
 
-  <header>
-    <h1>I’m <span id="typed-name"></span></h1>
-    <p>Web Developer | Gamer Vibes | Freelancer</p>
-    <div class="btns">
-      <a href="contact.html">Hire Me</a>
-      <a href="about.html">View My Work</a>
-    </div>
-  </header>
+    <!-- Featured Section (To scroll to) -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2 class="section-title">What I <span class="gradient-text">Do</span></h2>
+                <p class="section-subtitle">Services I offer to help grow your business</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Building fast, responsive, and scalable web applications using modern technologies and best practices.</p>
+                    <a href="projects.html" class="service-link">View Projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Creating cross-platform mobile applications that deliver native-like experiences on both iOS and Android.</p>
+                    <a href="projects.html" class="service-link">View Projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing intuitive user interfaces and experiences that engage users and drive conversions.</p>
+                    <a href="projects.html" class="service-link">View Projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <div class="footer-socials">
-      <a href="https://instagram.com/webxton" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://discord.gg/B8D7BZGe" target="_blank"><i class="fab fa-discord"></i></a>
-    </div>
-    <p>&copy; 2025 webXton | All rights reserved.</p>
-  </footer>
+    <!-- Quick Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box reveal-up">
+                    <span class="stat-number" data-count="50">0</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-box reveal-up">
+                    <span class="stat-number" data-count="30">0</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-box reveal-up">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-box reveal-up">
+                    <span class="stat-number" data-count="100">0</span>
+                    <span class="stat-label">Cups of Coffee</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    document.querySelector('.nav-toggle').onclick = () =>
-      document.querySelector('.nav-links').classList.toggle('open');
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal-up">
+                <h2>Ready to start a project?</h2>
+                <p>Let's collaborate and bring your ideas to life. I'm currently available for freelance work.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <span>Get In Touch</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    new Typed('#typed-name', {
-      strings: ['ABHI', 'webXton', 'a Coder', 'a Creator'],
-      typeSpeed: 60,
-      backSpeed: 40,
-      loop: true
-    });
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>WEB<span class="logo-accent">x</span>TON<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Building digital experiences that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WEBxTON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    ScrollReveal().reveal('header, .btns a', {
-      origin: 'bottom',
-      distance: '30px',
-      duration: 800,
-      delay: 100,
-      easing: 'ease-in-out',
-      reset: false
-    });
-  </script>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
