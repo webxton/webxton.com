@@ -51,7 +51,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <a href="mailto:webxton@gmail.com">webxton@gmail.com</a>
+                                <a href="mailto:webxton@gmail.com">webxton@example.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -60,7 +60,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Location</h4>
-                                <span>San Francisco, CA</span>
+                                <span>Uttrakhand, India </span>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -91,8 +91,12 @@
                 </div>
 
                 <div class="contact-form-container reveal-right">
-                    <!-- Form submits to Formspree (FREE) - Replace YOUR_FORM_ID with your actual Formspree form ID -->
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkovoygj" method="POST">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <p class="form-notice">
+                            <i class="fas fa-info-circle"></i> 
+                            Please use your real email so I can reply to you.
+                        </p>
+
                         <div class="form-group">
                             <div class="input-group">
                                 <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
@@ -133,8 +137,7 @@
                             <span class="error-message" id="messageError"></span>
                         </div>
 
-                        <!-- Hidden field for Formspree to redirect back after submission -->
-                        <input type="hidden" name="_next" value="https://webxton.github.io/webxton.com/contact.html?success=true">
+                        <input type="hidden" name="_next" value="https://your-website.com/contact.html?success=true">
 
                         <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
                             <span>Send Message</span>
